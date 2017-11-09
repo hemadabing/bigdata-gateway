@@ -5,6 +5,11 @@ spring:
 server:
   port: 8081
 
+logging:
+  file: logs/eureka-client.log  # 打印日志到文件
+  level:
+    ROOT: INFO
+
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10     # 心跳间隔（秒），默认30s
@@ -24,7 +29,7 @@ management:
     enabled: true       # 启用基本鉴权，默认为true
 endpoints:
   health:
-    sensitive: true     # actuator的health接口是否敏感
+    sensitive: false     # actuator的health接口是否敏感
 
 security:
   basic:

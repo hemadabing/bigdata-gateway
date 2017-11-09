@@ -14,7 +14,7 @@ eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: true   # 是否将自己注册到服务中心，默认为true
-    fetchRegistry: true        # 是否从服务中心获取注册信息，默认为true
+    registerWithEureka: false   # 是否将自己注册到服务中心，默认为true
+    fetchRegistry: false        # 是否从服务中心获取注册信息，默认为true
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/ # 设置与Eureka Server交互的地址，默认为http://localhost:8761/eureka，多个地址用逗号（,）分隔

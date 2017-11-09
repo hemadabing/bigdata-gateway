@@ -5,7 +5,7 @@ spring:
     config:
       server:
         native:
-          search-locations: /Users/shibingxin/databps/gateway/config-repo/
+          search-locations: /Users/shibingxin/code/databps/bigdata-gateway/config-repo/
 #        git:
 #          uri: ${config.repo.uri:https://github.com/luoml/spring-cloud-example}
 #          searchPaths: config-repo
