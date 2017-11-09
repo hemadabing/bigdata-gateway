@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server 
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: /Users/shibingxin/databps/gateway/config-repo/
+#        git:
+#          uri: ${config.repo.uri:https://github.com/luoml/spring-cloud-example}
+#          searchPaths: config-repo
+    
+server:
+  port: 8888

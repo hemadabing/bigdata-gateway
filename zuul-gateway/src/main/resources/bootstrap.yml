@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: zuul-gateway
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+server:
+  port: 8080
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/ #,http://peer2:8762/eureka/
+
+zuul:
+  routes:
+    feign-demo:                 # 名称自定义
+      path: /service/**         # 访问前缀
+      serviceId: feign-demo     # 服务名
+    eureka-client: 
+      path: /api/**
+      serviceId: eureka-client
+      stripPrefix: false        # 移除前缀，默认为true
+
+
+# 设置默认超时时间60s（default为全局；若设置某项服务的超时时间，只需要将default替换为对应的服务名）
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO

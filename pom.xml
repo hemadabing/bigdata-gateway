@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.databps.bigdaf</groupId>
+	<artifactId>gateway</artifactId>
+	<version>0.1.0</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>config-server</module>
+		<module>eureka-server</module>
+		<module>eureka-server-ha</module>
+		<module>zuul-gateway</module>		
+		<module>eureka-client</module>
+		<module>config-client</module>
+		<module>swagger2-demo</module>
+		<module>rest-demo</module>
+		<module>feign-demo</module>
+		<module>admin-server</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+	</properties>
+
+	<dependencies>
+
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>1.5.3.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<!--<build>-->
+		<!--<finalName>${finalName}</finalName>-->
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+				<!--<executions>-->
+	                <!--<execution>-->
+	                    <!--<goals>-->
+	                        <!--<goal>build-info</goal> &lt;!&ndash; 生成Actuator使用的构建信息文件build-info.properties &ndash;&gt;-->
+	                    <!--</goals>-->
+	                <!--</execution>-->
+	            <!--</executions>-->
+			<!--</plugin>-->
+			<!--<plugin>-->
+				<!--<artifactId>maven-compiler-plugin</artifactId>-->
+				<!--<configuration>-->
+					<!--<source>1.8</source>-->
+					<!--<target>1.8</target>-->
+					<!--<encoding>UTF-8</encoding>-->
+					<!--<compilerArguments>-->
+						<!--<verbose />-->
+					<!--</compilerArguments>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+	<!--</build>-->
+
+</project>

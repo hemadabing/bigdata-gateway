@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: admin-server
+  profiles:
+    active: dev
+  cloud:
+     config:
+      uri: http://127.0.0.1:8888
+
+server:
+  port: 8090
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+management:
+  security:
+    enabled: false  # 关闭actuator安全认证

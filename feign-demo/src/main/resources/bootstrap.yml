@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: feign-demo
+
+server:
+  port: 8181
+  
+logging:
+  level:
+    com.example.feign.service.DemoService: DEBUG  # 打印FeignClient接口日志
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
