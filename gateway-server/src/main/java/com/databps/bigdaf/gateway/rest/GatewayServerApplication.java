@@ -2,11 +2,12 @@ package com.databps.bigdaf.gateway.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class RestDemoApplication {
+public class GatewayServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestDemoApplication.class, args);
+		SpringApplication.run(GatewayServerApplication.class, args);
 	}
 }

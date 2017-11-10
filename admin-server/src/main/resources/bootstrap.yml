@@ -21,3 +21,8 @@ eureka:
 management:
   security:
     enabled: false  # 关闭actuator安全认证
+
+logging:
+  file: logs/admin-server.log  # 打印日志到文件
+  level:
+    ROOT: INFO

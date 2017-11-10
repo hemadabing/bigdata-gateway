@@ -6,8 +6,9 @@ server:
   port: 8181
   
 logging:
+  file: logs/feign-demo.log  # 打印日志到文件
   level:
-    com.example.feign.service.DemoService: DEBUG  # 打印FeignClient接口日志
+    ROOT: INFO
 
 eureka:
   instance:

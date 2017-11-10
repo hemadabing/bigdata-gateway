@@ -6,7 +6,7 @@ spring:
       uri: http://127.0.0.1:8888
 
 server:
-  port: 8080
+  port: 8079
  
 eureka:
   client:
@@ -34,6 +34,6 @@ hystrix:
             timeoutInMilliseconds: 60000
 
 logging:
+  file: logs/zuul-gateway.log  # 打印日志到文件
   level:
     ROOT: INFO
-    org.springframework.web: INFO
